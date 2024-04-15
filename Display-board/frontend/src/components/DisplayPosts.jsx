@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function DisplayPosts() {
+function DisplayPosts({changes,setChanges}) {
   const [posts,setPosts] = useState([])
   function fetchAllPosts()
   {
@@ -18,24 +18,31 @@ function DisplayPosts() {
       getposts();
   }
   useEffect(fetchAllPosts,[]);
+  useEffect(fetchAllPosts,[changes]);
   return (<>
-    <div className="lendlist">
-      <h2><span>Items Ready To Lend</span></h2>
-      {
-        posts.length>0?
-          (posts.map((item)=>(
-            <div key={item['_id']} className="LendItemCard">
-              <img src={`http://127.0.0.1:5000/images/${item['image']}`}/>
-              <div className="LenditemInfo">
-                <h2>Name : {item['name']}</h2>
-                <p>Description: {item['description']}</p>
-              </div>
-            </div>
-        )))
-        :
-        <h2>No Lended Items</h2>
-      }
-    </div>
+    <div className="articles">
+  <h2>Articles</h2>
+  {posts.length > 0 ? (
+    posts.map((post) => (
+      <div key={post['_id']} className="blog">
+        <img src={`http://127.0.0.1:5000/images/${post['image']}`} alt={post['name']} />
+        <div className="blog-content">
+          <div className="blog-info">
+            <h3>{post['name']}</h3>
+            <p>{post['description']}</p>
+          </div>
+          <div className="blog-meta">
+            <span className="author">Author: {post['username']}</span>
+            <span className="date">Date: {post['time']}</span>
+          </div>
+        </div>
+      </div>
+    ))
+  ) : (
+    <p>No Articles Posted Yet</p>
+  )}
+</div>
+
   </>)
 }
 
