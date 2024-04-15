@@ -97,3 +97,40 @@
 }
 
 
+.articles {
+  margin-top: 20px;
+}
+
+.blog {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.blog img {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.blog-content {
+  flex: 1;
+}
+
+.blog-info h3 {
+  margin-top: 0;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  color: #888;
+}
+
+.author {
+  margin-right: 20px;
+}
+
+.date {
+  margin-left: 20px;
+}
