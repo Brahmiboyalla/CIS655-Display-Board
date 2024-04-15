@@ -1,0 +1,99 @@
+*{
+  margin:0;
+  padding:0;
+  background-color:#f9f9f9;
+  color: black;
+}
+
+.Navigation{
+  font-size : 2.5rem;
+  padding:10px;
+  text-align: center;
+  background-color: #008DDA;
+  color: #F7EEDD;
+}
+
+.addpost {
+  max-width: 700px;
+  margin: 20px 25%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* text-align: center; */
+  padding: 20px;
+  /* background-color: #; */
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.addpost h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom:1px solid black ;
+}
+
+
+.addpost form ul {
+  list-style: none;
+  padding: 0;
+}
+
+.addpost form ul li {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.addpost form ul li label {
+  font-weight: bold;
+}
+
+.addpost form ul li input[type="text"]{
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.addpost form ul li textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  border-radius: 5px;
+  font-size: 16px;
+  min-height: 100px; /* Set a minimum height */
+  resize: none; /* Disable manual resizing */
+  overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+.addpost form ul li input[type="file"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.addpost form button[type="submit"],
+.addpost button {
+  width:100%;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addpost form button[type="submit"]:hover,
+.addpost button:hover {
+  background-color: #0056b3;
+}
+
+
