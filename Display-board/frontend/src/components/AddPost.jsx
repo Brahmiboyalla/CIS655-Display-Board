@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-function AddPost() {
+function AddPost({changes,setChanges}) {
   const [addPost,setAddPost] = useState();
   const [articleInfo, setArticleInfo] = useState({
     username:"",
@@ -42,6 +42,7 @@ function AddPost() {
         });
         if(response.ok){
           const data = await response.json();
+          setChanges(prev=>!prev)
           console.log("user uploaded the article",data);
           setAddPost(false);
           setArticleInfo({
